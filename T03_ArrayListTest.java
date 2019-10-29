@@ -1,5 +1,6 @@
 package kr.or.ddit.basic;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /*
@@ -9,6 +10,28 @@ import java.util.Scanner;
 public class T03_ArrayListTest {
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
+		ArrayList<String> name = new ArrayList<>();
 		
+		System.out.print("1번째 사람 : ");
+		name.add(s.nextLine());
+		System.out.print("2번째 사람 : ");
+		name.add(s.nextLine());
+		System.out.print("3번째 사람 : ");
+		name.add(s.nextLine());
+		System.out.print("4번째 사람 : ");
+		name.add(s.nextLine());
+		System.out.print("5번째 사람 : ");
+		name.add(s.nextLine());
+		
+		ArrayList<String> kimsarr = new ArrayList<>();
+		for(int i = 0; i < name.size(); i++) {
+			String kim;
+			if(name.get(i).charAt(0) == '김') {
+				kim = name.get(i);
+				kimsarr.add(kim);
+			}
+		}
+		System.out.println("------------------");
+		System.out.println(kimsarr);
 	}
 }
